@@ -7,7 +7,8 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="./css/reset.css">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <script src="js/jquery.js"></script>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/slide.js"></script>
     <script>
         $(function(){
             var menu = $('.nav > li');
@@ -67,7 +68,9 @@
             <div id="in_profile">
                 <h3>ABOUT ME</h3>
                 <div class="profile_group">
-                    <div class="profile_photo"></div>
+                    <video autoplay muted loop width="100%">
+                            <source src="./images/profile.mp4">
+                    </video>
                     <div class="profile_box">
                         <ul class="profile_title">
                             <li>Profile
@@ -163,41 +166,89 @@
         </div>
 
         <!-- 프로젝트1 -->
-        <div id="project_1">
+        <div id="project">
             <h3>PROJECTs</h3>
-            <div class="slide_wrapper">
-                <ul class="slides">
-                    <li>
-                        <h5>쉐이크쉑 메인페이지 리뉴얼</h5>
-                        <div class="port_group">
-                            <div class="port_img">
-                                <img src="./images/port2.png" width="300px" height="200px" alt="">
+            <div class="project_in">
+                <div class="container">
+                    <ul class="slide-container simple-list" id="slider">
+                        <li class="slide">
+                            <h5>쉐이크쉑 메인페이지 리뉴얼</h5>
+                            <div class="port_group1">
+                                <div class="port_img">
+                                    <img src="./images/port2.png" width="300px" height="200px" alt="">
+                                </div>
+                                <div class="port_txt">
+                                    <p>
+                                        기존 사이트가 사용하기 불편하고<br>
+                                        메인화면에 기능들이 거의 없고<br>
+                                        내비게이션 바를 통해서만 기능을<br>
+                                        선택할 수 있었기 때문에 이를 해결하고자<br>
+                                        주요 메뉴를 버튼화시켜서 메인화면에 배치하고<br>
+                                        주요 기능들을 메인화면으로 빼내서<br>
+                                        메인화면에서 간편하게 핵심 기능을<br>
+                                        사용할 수 있게 구현했습니다.
+                                    </p>
+                                    <ul>
+                                        <li><span>작업기간</span>2022. 04 ~ 2022. 06</li>
+                                        <li><span>주요기능</span>반응형 레이아웃, 동영상 메인배치</li>
+                                        <li><span>사용기술</span>html5, css3, jquery</li>
+                                        <li><a href="http://hhhc0213.dothome.co.kr"><span>도메인</span></a>hhhc0213.dothome.co.kr</a></li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="port_txt">
-                                <p>
-                                    기존 사이트가 사용하기 불편하고<br>
-                                    메인화면에 기능들이 거의 없고<br>
-                                    내비게이션 바를 통해서만 기능을<br>
-                                    선택할 수 있었기 때문에 이를 해결하고자<br>
-                                    주요 메뉴를 버튼화시켜서 메인화면에 배치하고<br>
-                                    주요 기능들을 메인화면으로 빼내서<br>
-                                    메인화면에서 간편하게 핵심 기능을<br>
-                                    사용할 수 있게 구현했습니다.
-                                </p>
-                                <ul>
-                                    <li><span>작업기간</span>2022. 04 ~ 2022. 06</li>
-                                    <li><span>주요기능</span>반응형 레이아웃, 동영상 메인배치</li>
-                                    <li><span>사용기술</span>html5, css3, jquery</li>
-                                    <li><a href="http://hhhc0213.dothome.co.kr"><span>도메인</span></a>hhhc0213.dothome.co.kr</a></li>
-                                </ul>
+                        </li>
+                        <li class="slide">
+                            <h5>닌텐도코리아 홈페이지 리뉴얼</h5>
+                            <div class="port_group2">
+                                <div class="port_img">
+                                    <img src="./images/port1.png" width="300px" height="200px" alt="">
+                                </div>
+                                <div class="port_txt">
+                                    <p>
+                                        기존 사이트가 사용하기 불편하고<br>
+                                        메인화면에 기능들이 거의 없고<br>
+                                        내비게이션 바를 통해서만 기능을<br>
+                                        선택할 수 있었기 때문에 이를 해결하고자<br>
+                                        주요 메뉴를 버튼화시켜서 메인화면에 배치하고<br>
+                                        주요 기능들을 메인화면으로 빼내서<br>
+                                        메인화면에서 간편하게 핵심 기능을<br>
+                                        사용할 수 있게 구현했습니다.
+                                    </p>
+                                    <ul>
+                                        <li><span>작업기간</span>2022. 04 ~ 2022. 06</li>
+                                        <li><span>주요기능</span>반응형 레이아웃, 동영상 메인배치</li>
+                                        <li><span>사용기술</span>html5, css3, jquery</li>
+                                        <li><a href="http://hhhc0213.dothome.co.kr"><span>도메인</span></a>hhhc0213.dothome.co.kr</a></li>
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
-                    </li>
-                    <li><a href="#"><img src="./images/port1.png" width="370px" height="300px" alt=""></a></li>
-                    <li><a href="#"><img src="./images/game3.png" width="370px" height="300px" alt=""></a></li>
-                </ul>
+                        </li>
+                        <li class="slide">
+                            <h5>임시 프로젝트</h5>
+                            <div class="port_group3">
+                                <div class="port_img">
+                                    <img src="./images/port3.jpg" width="300px" height="200px" alt="">
+                                </div>
+                                <div class="port_txt">
+                                    <p>
+                                        임시 프로젝트 설명
+                                    </p>
+                                    <ul>
+                                        <li><span>작업기간</span>2022. 04 ~ 2022. 06</li>
+                                        <li><span>주요기능</span>반응형 레이아웃, 동영상 메인배치</li>
+                                        <li><span>사용기술</span>html5, css3, jquery</li>
+                                        <li><a href="http://hhhc0213.dothome.co.kr"><span>도메인</span></a>hhhc0213.dothome.co.kr</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <a id="prev"></a>
+                <a id="next"></a>
             </div>
         </div>
+
         <!-- 마무리 -->
         <div id="end">
             <div class="in_end"></div>
