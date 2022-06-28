@@ -7,10 +7,7 @@
     height: 100vh
 }
 
-#wrap>div:nth-child(1) {
-    /*background-color: burlywood;*/
-    background: url(../main.png) no-repeat 0 0;
-}
+#wrap>div:nth-child(1) {}
 
 #wrap>div:nth-child(2) {
     background-color:aliceblue;
@@ -202,16 +199,16 @@
     justify-content:space-between;
 }
 
-.profile_group .profile_photo {
-    width:450px; height:500px;
-    background: url(../images/profileImg.png) no-repeat;
-    background-size:480px 500px;
+.profile_group video{
+    width:490px; height:500px;
+    object-fit:fill;
+    border:1px solid #666;
 }
 .profile_group .profile_box{
-    width:450px; height:500px;
+    width:490px; height:500px;
 }
 .profile_box .profile_title{
-    padding:10px 0 0 40px;
+    padding:10px 0 0 60px;
 }
 .profile_box .profile_title > li{
     font-size:30px;
@@ -315,10 +312,19 @@
 }
 
 
+/* 프로젝트 */
 
-#project_1 {}
+#project {
+    width:100%;
+}
 
-#project_1 > h3{
+#project .project_in{
+    margin:0 auto;
+    margin-top:80px;
+    width:1200px; height:600px;
+}
+
+#project > h3{
     margin: 0 auto;
     padding-top:80px;
     width: 300px;
@@ -328,61 +334,81 @@
     color: #FFF;
     text-align:center;
 }
-#project_1 .slide_wrapper{
+#project .container{
     position:relative;
-    top:80px;
-    left:15px;
     margin:0 auto;
-    width:1200px;
+    width:1000px;
     height:600px;
+    border-radius:20px;
     overflow:hidden;
 }
 
-#project_1 .slides{
+
+#project .slide-container{
     position:absolute;
-    top:0; left:0;
+    width:1000px; height:600px;
+    left:0;
 }
 
-#project_1 .slides.animated{
-    transition:0.5s ease-out;
+#project .slide-container.animated{
+    transition:left 0.5s ease-out;
 }
 
-#project_1 .slides > li{
-    width:1200px;
+#project .slide{
+    position:absolute;
+    width:100%;
     height:600px;
-    border-radius:20px;
+    box-sizing:border-box;
     float:left;
+    overflow:hidden;
     background-color:#fff;
 }
 
-#project_1 .slides > li h5{
+
+
+#project .slide h5{
     margin-top:30px;
-    width:100%; height:50px;
+    width:700px;height:50px;
     font-size:25px;
     color:#333;
     font-weight:900;
     padding-left:100px;
 }
 
-#project_1 .slides > li .port_group{
+#project .slide .port_group1{
     margin:0 auto;
     width:1000px;
     height:500px;
     display:flex;
 }
 
-#project_1 .slides > li .port_img{
-    width:500px; height:500px;
+#project .slide .port_group2{
+    margin:0 auto;
+    width:1000px;
+    height:500px;
+    display:flex;
 }
 
-#project_1 .slides > li .port_img img{
+#project .slide .port_group3{
+    margin:0 auto;
+    width:1000px;
+    height:500px;
+    display:flex;
+}
+
+#project .slide .port_img{
+    width:460px; height:500px;
+}
+
+#project .slide .port_img img{
     margin:100px 0 0 100px;
 }
-#project_1 .slides > li .port_txt{
-    width:500px; height:500px;
+#project .slide .port_txt{
+    margin:0 auto;
+    width:460px; height:500px;
 }
 
-#project_1 .slides > li .port_txt p{
+#project .slide .port_txt p{
     padding:20px 0 0 25px;
     width:500px; height:200px;
     color:#333;
@@ -391,13 +417,13 @@
     letter-spacing:2px;
     line-height:20px;
 }
-#project_1 .slides > li .port_txt ul{
+#project .slide .port_txt ul{
     border-top:1px solid #ccc;
     padding:30px 0 0 20px;
     box-sizing:border-box;
 }
 
-#project_1 .slides > li .port_txt ul li{
+#project .slide .port_txt ul li{
     margin-bottom:10px;
     font-size:16px;
     color:#333;
@@ -406,7 +432,7 @@
     font-weight:600;
     
 } 
-#project_1 .slides > li .port_txt ul li span{
+#project .slide .port_txt ul li span{
     display:block;
     width:80px; height:30px;
     background-color:#ccc;
@@ -416,12 +442,40 @@
     font-size:14px;
 }
 
-#project_1 .slides > li .port_txt ul li:last-child:hover{
+#project .slide .port_txt ul li:last-child:hover{
     text-decoration:underline;
 }
 
+#prev,
+#next{
+    z-index:9999;
+    display:inline-block;
+    width:5em; height:5em;
+    background-position:center center;
+    background-repeat:no-repeat;
+    transition:all .3s ease-in;
+}
 
+#prev{
+    position:relative;
+    top:-53%;
+    left:0;
+    background-image:url(../images/prevBtn.png);
+    background-size:contain;
+}
 
-#project_1 .slide_wrapper li{
+#prev:hover{
+    opacity:0.6;
+}
 
+#next{
+    position:relative;
+    top:-53%;
+    left:44.7%;
+    background-image:url(../images/nextBtn.png); margin-left:540px;
+    background-size:contain;
+}
+
+#next:hover{
+    opacity:0.6;
 }
