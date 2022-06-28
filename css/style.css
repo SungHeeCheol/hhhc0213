@@ -13,7 +13,7 @@
 }
 
 #wrap>div:nth-child(2) {
-    background: url(../profile.png) no-repeat 0 0;
+    background-color:aliceblue;
 }
 
 #wrap>div:nth-child(3) {
@@ -189,7 +189,7 @@
     height: 100px;
     box-sizing: border-box;
     font-size: 40px;
-    color: #666;
+    color: #333;
     text-align:center;
 }
 
@@ -203,20 +203,18 @@
 }
 
 .profile_group .profile_photo {
-    width:480px; height:500px;
+    width:450px; height:500px;
     background: url(../images/profileImg.png) no-repeat;
     background-size:480px 500px;
-    border:1px solid #ccc;
 }
 .profile_group .profile_box{
-    width:480px; height:500px;
-    border:1px solid #ccc;
+    width:450px; height:500px;
 }
 .profile_box .profile_title{
-    padding:30px 0 0 40px;
+    padding:10px 0 0 40px;
 }
 .profile_box .profile_title > li{
-    font-size:25px;
+    font-size:30px;
     color:#666;
     margin-bottom:30px;
 }
