@@ -2,50 +2,25 @@
     width: 100%
 }
 
-#wrap>div {
-    width: 100%;
-    height: 100vh
+/* 메인 */
+#main{
+    width:100%;
+    height:100vh;
 }
 
-#wrap>div:nth-child(1) {}
-
-#wrap>div:nth-child(2) {
-    background-color:aliceblue;
-}
-
-#wrap>div:nth-child(3) {
-    background-color: #0C4B4D;
-}
-
-#wrap>div:nth-child(4) {
-    background-color: #6799FF;
-}
-
-#wrap>div:nth-child(5) {
-    background-color: rgb(222, 135, 208);
-}
-
-#wrap>div>div {
-    margin: 0 auto;
-    width: 1500px;
-    height: 100vh;
-    /* background-color:rgba(255, 244, 146, 0.5); */
-}
-
-#main>img {
+#main>video {
     z-index: -2;
     width: 100%;
     height: 100vh;
     position: absolute;
     top: 0;
     left: 0;
+    object-fit:cover;
 }
 
 #main .opacity {
     width: 100%;
     height: 100vh;
-    background-color: #000;
-    opacity: 0.5;
     z-index: -1;
     position: absolute;
     top: 0;
@@ -60,8 +35,9 @@
 #main .header {
     width: 100%;
     height: 120px;
-    background-color:rgba(0, 0, 10, 0.2);
+    background-color:rgba(0, 0, 10, 0.3);
     box-shadow:0 0 10px #000;
+    
 }
 #main .header_in{
     margin:0 auto;
@@ -126,7 +102,7 @@
 #q_mn {
     position: absolute;
     right: 20px;
-    top: 300px;
+    top: 600px;
     z-index: 9999;
     width: 120px;
     height: 200px;
@@ -162,6 +138,7 @@
 #q_mn ul.nav li a:hover {
     background-color: #000;
     color: #fff;
+    border-radius:7px;
 }
 
 #q_mn ul.nav li.on a {
@@ -171,6 +148,8 @@
 /* 프로필 */
 #profile {
     width: 100%;
+    height:100vh;
+    background-color:aliceblue;
 }
 
 #in_profile {
@@ -211,14 +190,14 @@
     padding:10px 0 0 60px;
 }
 .profile_box .profile_title > li{
-    font-size:30px;
+    font-size:35px;
     color:#666;
     margin-bottom:30px;
 }
 .profile_box .profile_inner{
     padding-top:10px;
     margin-left:30px;
-    font-size:16px;
+    font-size:20px;
     color:#000;
 }
 .profile_box .profile_inner > li{
@@ -228,8 +207,9 @@
 
 /* 스킬 */
 #skill {
-    
-
+    width:100%;
+    height:100vh;
+    background-color: #0C4B4D;
 }
 #skill h3{
     margin: 0 auto;
@@ -316,6 +296,15 @@
 
 #project {
     width:100%;
+    height:100vh;
+    background-color: #6799FF;
+    overflow:hidden;
+    margin:0 auto;
+    transition:all 0.5s;
+}
+
+#project.on{
+    height:185vh;
 }
 
 #project .project_in{
@@ -334,12 +323,62 @@
     color: #FFF;
     text-align:center;
 }
+
+#project .main_port{
+    padding-top:30px;
+    width:1000px;
+    height:600px;
+    border-radius:10px;
+    margin:0 auto;
+    background-color:#fff;
+}
+
+#project .main_port h5{
+    margin-top:30px;
+    width:700px;height:50px;
+    font-size:25px;
+    color:#333;
+    font-weight:900;
+    padding-left:100px;
+}
+
+#project .mainport_group{
+    width:100%;
+    height:500px;
+    display:flex; 
+    justify-content:space-between;
+}
+
+#project .more_btn{
+    margin:0 auto;
+    display:block;
+    margin-top:70px;
+    width:100px;
+    height:50px;
+    cursor:pointer;
+    background:url(../images/more.png) no-repeat 0 0;
+    background-size:100px 50px;
+    background-image:url;
+}
+
+#project .more_btn:hover{
+    opacity:0.6;
+}
+
+#project  h4{
+    margin-top:70px;
+    text-align:center;
+    font-size:35px;
+    color:#fff;
+}
+
 #project .container{
     position:relative;
     margin:0 auto;
+    margin-top:40px;
     width:1000px;
     height:600px;
-    border-radius:20px;
+    border-radius:10px;
     overflow:hidden;
 }
 
@@ -364,9 +403,8 @@
     background-color:#fff;
 }
 
-
-
 #project .slide h5{
+    padding-top:30px;
     margin-top:30px;
     width:700px;height:50px;
     font-size:25px;
@@ -376,6 +414,8 @@
 }
 
 #project .slide .port_group1{
+    padding-top:30px;
+    box-sizing:border-box;
     margin:0 auto;
     width:1000px;
     height:500px;
@@ -383,6 +423,8 @@
 }
 
 #project .slide .port_group2{
+    padding-top:30px;
+    box-sizing:border-box;
     margin:0 auto;
     width:1000px;
     height:500px;
@@ -390,17 +432,21 @@
 }
 
 #project .slide .port_group3{
+    padding-top:30px;
+    box-sizing:border-box;
     margin:0 auto;
     width:1000px;
     height:500px;
     display:flex;
 }
 
-#project .slide .port_img{
+#project .port_img{
     width:460px; height:500px;
+    padding:20px 0 0 20px;
+    box-sizing:border-box;
 }
 
-#project .slide .port_img img{
+#project .port_img img{
     margin:100px 0 0 100px;
 }
 #project .slide .port_txt{
@@ -408,7 +454,7 @@
     width:460px; height:500px;
 }
 
-#project .slide .port_txt p{
+#project .port_txt p{
     padding:20px 0 0 25px;
     width:500px; height:200px;
     color:#333;
@@ -417,13 +463,13 @@
     letter-spacing:2px;
     line-height:20px;
 }
-#project .slide .port_txt ul{
+#project .port_txt ul{
     border-top:1px solid #ccc;
     padding:30px 0 0 20px;
     box-sizing:border-box;
 }
 
-#project .slide .port_txt ul li{
+#project .port_txt ul li{
     margin-bottom:10px;
     font-size:16px;
     color:#333;
@@ -432,7 +478,7 @@
     font-weight:600;
     
 } 
-#project .slide .port_txt ul li span{
+#project .port_txt ul li span{
     display:block;
     width:80px; height:30px;
     background-color:#ccc;
@@ -442,7 +488,7 @@
     font-size:14px;
 }
 
-#project .slide .port_txt ul li:last-child:hover{
+#project .port_txt ul li:last-child:hover{
     text-decoration:underline;
 }
 
@@ -478,4 +524,11 @@
 
 #next:hover{
     opacity:0.6;
+}
+
+/* 마무리 */
+#end{
+    width:100%;
+    height:100vh;
+    background-color: rgb(222, 135, 208);
 }
